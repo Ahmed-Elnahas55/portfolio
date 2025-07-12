@@ -133,6 +133,7 @@ ul {
 }
 .header .main-nav .active li{
   border-bottom:3px solid #a4eb25;
+  transition: var(--main-transition);
 }
 .header .main-nav .active:hover li{
   border-bottom: 3px solid white;
