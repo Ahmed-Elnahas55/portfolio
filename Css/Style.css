@@ -134,6 +134,9 @@ ul {
 .header .main-nav .active li{
   border-bottom:3px solid #a4eb25;
 }
+.header .main-nav .active:hover li{
+  border-bottom: 3px solid white;
+}
 .header .main-nav a{
   display: block;
   padding: 0 40px;
