@@ -67,9 +67,9 @@ ul {
   transition: var(--main-transition);
 }
 #btn{
-  background-color: var(--main-color);
+  background-color: var(--second-background);
   position: fixed;
-  border: none;
+  border: 2px solid var(--main-color);
   color: white;
   border-radius: 50%;
   font-size: 30px;
@@ -83,11 +83,17 @@ ul {
   transition: opacity 0.8s ease, visibility 0.4s ease;
   z-index: 999;
 }
+#btn:hover{
+  background-color: var(--main-color);
+}
 #btn.show {
   opacity: 1;
   visibility: visible;
 }
 #btn i{
+  color: var(--main-color);
+}
+#btn:hover i{
   color: var(--second-background);
 }
 .bt{
@@ -357,6 +363,7 @@ ul {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  box-shadow: rgba(164, 167, 170, 0.31) 0px 5px 15px 0px;
   background-color: var(--second-background);
 }
 .project .box img{

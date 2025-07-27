@@ -179,6 +179,7 @@ ul {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  box-shadow: rgba(164, 167, 170, 0.31) 0px 5px 15px 0px;
   background-color: var(--second-background);
 }
 .project .box img{
