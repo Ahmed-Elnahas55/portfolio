@@ -123,7 +123,15 @@ ul {
 /* End Global Rules */
 /* strat header */
 .header{
-  position: relative;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f1318;
 }
 .header .container{
   display: flex;
@@ -181,6 +189,7 @@ ul {
 .loading{
   position: relative;
   padding-bottom: var(--main-padding-bottom);
+  margin: 11%;
 }
 .loading .container{
   display: flex;
@@ -543,4 +552,5 @@ ul {
     font-size: 15px;
   }
 }
+
 /* End footer */
