@@ -1,217 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AE folio</title>
-  <link rel="icon" href="Image/logo-icon.png">
-  <!-- Render All Elements Normally -->
-  <link rel="stylesheet" href="Css/normalize.css">
-  <!-- font Awesome Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- main project css -->
-  <link rel="stylesheet" href="Css/Style.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+  <title>AE Folio</title>
+  <link rel="icon" href="image/logo-icon.png">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Style link -->
+  <link rel="stylesheet" href="css/Style.css">
 </head>
-<body>
-  <div class="header" >
-    <div class="container" >
-      <div class="logo">
-        <img src="Image/logo.png" loading="lazy">
+<body class="dark-theme">
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="container">
+      <a href="" class="logo"><img src="image/logo-icon.png" loading="lazy"></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle-mobile" class="theme-btn mobile-only" aria-label="تبديل الثيم">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="nav-right">
+        <button id="theme-toggle-desktop" class="theme-btn desktop-only" aria-label="تبديل الثيم">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-        <ul class="main-nav">
-          <a href="#Home" class="active"><li>Home</li></a>
-          <a href="#About"><li>About</li></a>
-          <a href="#Skills"><li>Skills</li></a>
-          <a href="#Projects"><li>Projects</li></a>
-          <a href="#Contact"><li>Contact</li></a>
-        </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-split">
+      <!-- Left side - Photo -->
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="image/main.png" alt="Ahmed Elnahas" class="profile-photo" loading="lazy"/>
+        </div>
+      </div>
+      <!-- Right side - Text & buttons -->
+      <div class="hero-text">
+        <p class="greeting">Hello, I'm</p>
+        <h1>Ahmed <span>Elnahas</span></h1>
+        <h2>Frontend Developer</h2>
+        <p class="lead">
+          I build modern, fast and responsive websites & web applications<br />
+          using <strong>React</strong> • <strong>Tailwind CSS</strong> • <strong>Next.js</strong> • <strong>JavaScript</strong>
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/ahmed-elnahas55" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ahmed-ashraf-3548a834a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://wa.me/201159725414" aria-label="Twitter"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- strat loading -->
-   <div class="loading item from-left">
+</section>
+  <!-- About -->
+  <section id="about" class="section about">
     <div class="container">
-      <div class="text">
-      <h2>Hello There,</h2>
-      <h1>I'm Ahmed <span>Ashraf</span></h1>
-      <p>Frontend Developer</p>
-      <a href="#Contact">Contact Me</a>
-      </div>
-      <div class="image">
-        <img src="Image/main.png" loading="lazy">
-      </div>
-    </div>
-   </div>
-  <!-- End loading -->
-  <!-- start About -->
-   <div class="about item from-left" id="About">
-    <div class="main-title">About Me</div>
-    <div class="container">
-      <div class="img">
-        <img src="Image/About.jpg" loading="lazy">
-      </div>
-      <div class="text">
-        <h2>Summary</h2>
-        <p>Fresh and passionate Frontend Developer with a strong foundation in modern web technologies. Focused on building responsive, user-friendly interfaces and continuously improving through learning and practice.</p>
-        <a href="AE-CV.pdf" target="_blank">Download_Cv</a>
-      </div>
-    </div>
-   </div>
-  <!-- End About -->
-   <!-- strat Skills -->
-    <div class="skills item from-left" id="Skills">
-      <div class="main-title">My Skills</div>
-      <div class="container">
-        <div class="sub">
-          <div class="box">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <p>Html</p>
+      <h2><span>About</span> Me</h2> 
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="photo-frame">
+            <img src="image/main.png">
           </div>
-          <div class="box">
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-            <p>Css</p>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-js" style="color: #f0dc55;"></i>
-            <p>Java Script</p>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-bootstrap" style="color: #7818f7;"></i>
-            <p>BOOTSTRAP</p>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-react" style="color: #66dbfb;"></i>
-            <p>REACT.JS</p>
-          </div>
-          <div class="box">
-            <i class="fa-solid fa-water" style="color: #00acc1;"></i>
-            <p>Tailwind Css</p>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-git-alt" style="color: #f05539;"></i>
-            <p>Git</p>
-          </div>
-          <div class="box">
-            <i class="fa-brands fa-github" style="color: white;"></i>
-            <p>Github</p>
-          </div>
+        </div> 
+        <div class="about-text">
+          <p>A front-end developer passionate about designing and programming seamless and engaging user experiences</p>
+          <p>I focus on writing clean, easy-to-maintain code that is compatible with all devices</p>
+          <p>I enjoy turning ideas into real digital products that help people and solve their problems</p>
         </div>
       </div>
     </div>
-   <!-- End Skills -->
-    <!-- start Projects -->
-     <div class="project item from-left" id="Projects">
-      <div class="main-title">My Projects</div>
-      <div class="container">
-        <div class="box">
-          <img src="Image/project1.jpg" loading="lazy">
-          <p>Design a simple personal page that shows a brief about the site owner (Ahmed Ashraf), displays the name and job title, and a contact button.</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-          </div>
-          <a href=" https://ahmed-elnahas55.github.io/AE-project01/" target="_blank" class="btn">Live Demo</a>
-        </div>                  
-        <div class="box">
-          <img src="Image/project2.jpg" loading="lazy">
-          <p>Create a modern and attractive profile page that displays basic information about the developer Ahmed El Nahhas and provides an interactive user experience.</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-          </div>
-          <a href="https://ahmed-elnahas55.github.io/AE-Project02/" target="_blank" class="btn">Live Demo</a>
-        </div>                  
-        <div class="box">
-          <img src="Image/progrct-3.png" loading="lazy">
-          <p>A website for a Ka-Tajribeh company showing sections that include the number of employees, who they are, and what packages the company offers.</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-          </div>
-          <a href="https://ahmed-elnahas55.github.io/AE-project03/" target="_blank" class="bt">Live Demo</a>
-        </div>                  
-        <div class="box">
-          <img src="Image/project4.jpg" loading="lazy">
-          <p>Simple and stylish login/signup interface tailored for a project management app.</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-            <i class="fa-brands fa-js" style="color: #f0dc55;"></i>
-          </div>
-          <a href="https://ahmed-elnahas55.github.io/AE-Project04/" target="_blank" class="btn">Live Demo</a>
-        </div>                  
-        <div class="box">
-          <img src="Image/project5.png" loading="lazy">
-          <p>Simple and modern login page with social login options and a signup link</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-            <i class="fa-brands fa-js" style="color: #f0dc55;"></i>
-          </div>
-          <a href="https://ahmed-elnahas55.github.io/AE-Project5/" target="_blank" class="btn">Live Demo</a>
-        </div>                  
-        <div class="box">
-          <img src="Image/project6.png" loading="lazy">
-          <p>Simple and modern login page with social login options and a signup link</p>
-          <div class="icons">
-            <i class="fa-brands fa-html5" style="color: #e5532d;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #265aea;"></i>
-            <i class="fa-brands fa-js" style="color: #f0dc55;"></i>
-          </div>
-          <a href="https://ahmed-elnahas55.github.io/project6/" target="_blank" class="btn">Live Demo</a>
-        </div>                  
+  </section>
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2><span>My skills</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-react"></i>
+          <h3>React</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <h3>HTML5</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS3</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-bootstrap"></i>
+          <h3>BOOTSTRAP</h3>
+        </div>
       </div>
-      <a href="More-project.html">More Projects</a>
-     </div>
-    <!-- End Projects -->
-     <!-- start contact -->
-      <div class="contact item from-left" id="Contact">
-      <div class="main-title">Contact Me</div>
-        <div class="container">
-          <div class="box">
-            <div class="content">
-              <div class="details">
-                <i class="fa-solid fa-phone"></i>
-                <div class="info">+201159725414</div>
-              </div>
-              <div class="details">
-                <i class="fa-solid fa-envelope"></i>
-                <div class="info">ahmedelnahas55u@gmail.com</div>
-              </div>
-              <div class="details">
-                <i class="fa-solid fa-location-dot"></i>
-                <div class="info">Egypt-ElGarbiea-Tanta</div>
-              </div>
-              <div class="social-icon">
-                <ul>
-                  <a href="https://www.facebook.com/ahmed.a.elnahas.2025" target="_blank"><li><i class="fa-brands fa-facebook"></i></li></a>
-                  <a href="https://www.instagram.com/ahmedashrafelnahas?igsh=MWNzczNiMHRnNTg3eA==" target="_blank"><li><i class="fa-brands fa-instagram"></i></li></a>
-                  <a href="https://github.com/Ahmed-Elnahas55" target="_blank"><li><i class="fa-brands fa-github"></i></li></a>
-                  <a href="https://www.linkedin.com/in/ahmed-ashraf-3548a834a/" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                  <a href="https://x.com/AhmedAshra85529?t=QWqHtYrHlFRi1OLg273wyw&s=09" target="_blank"><li><i class="fa-brands fa-x-twitter"></i></li></a>
-                </ul>
-              </div>
+    </div>
+  </section>
+  <!-- Projects -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2><span>My projects</span></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="image/project1.jpg" alt="project 1">
+          </div>
+          <div class="project-info">
+            <h3>Project 1</h3>
+            <p>Design a simple personal page that shows a brief about</p>
+            <div class="tags">
+              <span>CSS</span>
+              <span>HTML</span>
             </div>
-            <div class="inputs">
-              <form action="https://formsubmit.co/ahmedelnahas55u@gmail.com" method="POST">
-                <input class="main-input" type="text" name="name" placeholder="Your Name"/>
-                <input class="main-input" type="email" name="email" placeholder="Your Email"/>
-                <input class="main-input" type="phone" name="phone" placeholder="Your Phone"/>
-                <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
-                <button type="submit">submit</button>
-              </form>
+            <a href="https://ahmed-elnahas55.github.io/AE-project01/" class="project-link">Demo live</a>
+          </div>
+        </div> 
+        <div class="project-card">
+          <div class="project-img">
+            <img src="image/project2.jpg" alt="project 2">
+          </div>
+          <div class="project-info">
+            <h3>Project 2</h3>
+            <p>Create a modern and attractive profile page that displays basic information</p>
+            <div class="tags">
+              <span>CSS</span>
+              <span>HTML</span>
             </div>
+            <a href="https://ahmed-elnahas55.github.io/AE-Project02/" class="project-link">Demo live</a>
+          </div>
+        </div> 
+        <div class="project-card">
+          <div class="project-img">
+            <img src="image/project3.png" alt="project 3">
+          </div>
+          <div class="project-info">
+            <h3>Project 3</h3>
+            <p>A website for a Ka-Tajribeh company showing sections that include the number of employees</p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>CSS</span>
+              <span>HTML</span>
+            </div>
+            <a href="https://ahmed-elnahas55.github.io/AE-project03/" class="project-link">Demo live</a>
+          </div>
+        </div> 
+        <div class="project-card">
+          <div class="project-img">
+            <img src="image/project4.jpg" alt="project">
+          </div>
+          <div class="project-info">
+            <h3>Project 4</h3>
+            <p>Simple and stylish login/signup interface tailored for a project management app. </p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>CSS</span>
+              <span>HTML</span>
+            </div>
+            <a href="https://ahmed-elnahas55.github.io/AE-Project04/" class="project-link">Demo live</a>
           </div>
         </div>
       </div>
-     <!-- End contact -->
-      <!-- strat footer -->
-       <div class="footer">&copy; 2025 <span>AhmedElnahas</span> All Right Reserved</div>
-      <!-- End footer -->
-  <button id="btn" class="show"><i class="fa-solid fa-hand-point-up"></i></button>
+      <a href="project.html" class="btn-project">More Project</a>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact <span>Me</span></h2>
+      <p class="contact-lead">Ready to discuss any idea or collaboration opportunity</p>
+      <a href="mailto:yourname@example.com" class="btn primary large">Send an email now</a>
+      <div class="social-big">
+        <a href="https://github.com/ahmed-elnahas55"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ahmed-ashraf-3548a834a/"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ahmedelnahas55u@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>By Ahmed Elnahas &copy;</p>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
