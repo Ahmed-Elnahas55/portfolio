@@ -1,6 +1,4 @@
-// ────────────────────────────────
 // Mobile Menu Toggle
-// ────────────────────────────────
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks   = document.getElementById('nav-links');
 
@@ -28,10 +26,7 @@ if (menuToggle && navLinks) {
     });
   });
 }
-
-// ────────────────────────────────
 // Theme Toggle (Dark ↔ Light)
-// ────────────────────────────────
 const themeToggleBtns = [
   document.getElementById('theme-toggle-mobile'),
   document.getElementById('theme-toggle-desktop')
@@ -59,5 +54,38 @@ themeToggleBtns.forEach(btn => {
     const current = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
     const next = current === 'dark-theme' ? 'light-theme' : 'dark-theme';
     applyTheme(next);
+  });
+});
+// Scroll Reveal Effect
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  reveals.forEach(reveal => {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveal.getBoundingClientRect().top;
+    const visiblePoint = 150;
+
+    if (revealTop < windowHeight - visiblePoint) {
+      reveal.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+// Back to Top Button
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 });
