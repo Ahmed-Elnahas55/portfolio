@@ -421,6 +421,18 @@ h2 span {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 32px;
 }
+.projects-grid .project-card:nth-child(2) {
+    order: 1;
+}
+.projects-grid .project-card:nth-child(1) {
+    order: 2;
+}
+.projects-grid .project-card:nth-child(4) {
+    order: 3;
+}
+.projects-grid .project-card:nth-child(3) {
+    order: 4;
+}
 .project-card {
   background: var(--bg-secondary);
   border-radius: 12px;

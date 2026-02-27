@@ -239,7 +239,7 @@ h2 span {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 .project-card:hover {
   transform: translateY(-12px);
