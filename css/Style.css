@@ -601,7 +601,7 @@ footer {
     border-color 0.4s;
 }
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   h1 {
     font-size: 3.8rem;
   }
@@ -615,7 +615,7 @@ footer {
     flex-direction: column;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .container {
     padding: 10px 15px;
   }
@@ -635,3 +635,4 @@ footer {
     padding: 13px 0;
   }
 }
+
