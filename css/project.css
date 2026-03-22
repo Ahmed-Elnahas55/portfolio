@@ -297,13 +297,13 @@ footer {
   transition: background 0.4s, border-color 0.4s;
 }
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 { font-size: 3.8rem; }
   h2 { font-size: 2.8rem; }
   .about-grid { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container{
     padding: 10px 15px;
   }
