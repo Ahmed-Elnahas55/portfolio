@@ -89,3 +89,31 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// Animation for Progress Bars when scrolling  (SKILLS)
+function animateSkillsProgress() {
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  progressBars.forEach(bar => {
+    const rect = bar.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight * 0.80) {
+      const targetWidth = bar.getAttribute('data-width');
+
+      bar.style.width = targetWidth;
+
+      const text = bar.parentElement.querySelector('.progress-text');
+      if (text) {
+        setTimeout(() => {
+          text.classList.add('show');
+        }, 600);
+      }
+    }
+  });
+}
+window.addEventListener('scroll', animateSkillsProgress);
+
+window.addEventListener('load', () => {
+  setTimeout(animateSkillsProgress, 800);
+});
