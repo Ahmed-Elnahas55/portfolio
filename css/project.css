@@ -94,6 +94,7 @@ body {
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
+  margin-bottom: 40px;
 }
 .light-theme #back-to-top {
   background: #6366f1;
